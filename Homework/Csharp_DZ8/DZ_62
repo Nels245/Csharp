@@ -1,0 +1,26 @@
+//  Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+//  Например, на выходе получается вот такой массив:
+//  01 02 03 04
+//  12 13 14 05
+//  11 16 15 06
+//  10 09 08 07
+
+    int size = 4;    
+    int[][] numbers = new int[4][4];
+    
+    PrintInSpiral(numbers, 4);
+    
+void PrintInSpiral(int [][] numbers, int size)
+{
+for(int i = size – 1 , j = 0 ; i >= 0 ; i–, j++)
+{
+for(int k = j ; k < i; k++)
+Console.Write(numbers[j][k]+ " ");
+for(int k = j ; k < i; k++) 
+Console.Write(numbers[k][i]+ " ");
+for(int k = i ; k > j; k–)
+Console.Write(numbers[i][k]+ " ");
+for(int k = i ; k > j; k–)
+Console.Write(numbers[k][j]+ " ");
+}
+}

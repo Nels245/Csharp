@@ -1,0 +1,24 @@
+int[,,] m = new int[2, 2, 2];
+
+FillArray(m);
+PrintArray(m);
+
+void FillArray(int[,,] m)
+{
+        for (int x = 0; x < 2; x++)
+            for (int y = 0; y < 2; y++)
+                for (int z = 0; z < 2; z++)
+                    m[x, y, z] = new Random().Next(10,99);
+} 
+void PrintArray(int[,,] m)
+{
+        for (int x = 0; x < 2; x++)
+        {
+            for (int y = 0; y < 2; y++)
+            {
+                Console.WriteLine();
+                for (int z = 0; z < 2; z++)
+                    Console.Write($"{m[x, y, z]}({x},{y},{z}) ");  
+            }
+        }
+}

@@ -1,0 +1,11 @@
+// Задача 19. Проверка пятизначного числа на полиндромность
+Console.Clear();
+
+string n = Console.ReadLine() ?? "";
+
+if (n[0] == n[4] && n[1] == n[3])
+{
+    Console.Write("да");
+}
+else
+    Console.Write("нет");
